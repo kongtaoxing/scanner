@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Scanner</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">扫码</string>
+    <string name="title_notifications">生码</string>
+    <string name="scan_input_hint">输入文字</string>
 </resources>
