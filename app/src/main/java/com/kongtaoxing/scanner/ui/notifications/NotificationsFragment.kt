@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
+import com.kongtaoxing.scanner.R
 import com.kongtaoxing.scanner.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {
@@ -32,6 +35,16 @@ class NotificationsFragment : Fragment() {
         notificationsViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        notificationsViewModel.qrCodeBitmap.observe(viewLifecycleOwner, Observer { bitmap ->
+            binding.qrCodeImage.setImageBitmap(bitmap)
+        })
+
+        binding.createButton.setOnClickListener {
+            val inputText = binding.textInput.text.toString()
+            notificationsViewModel.generateQRCode(inputText)
+        }
+
         return root
     }
 
