@@ -3,5 +3,9 @@
     <string name="title_home">主页</string>
     <string name="title_dashboard">扫码</string>
     <string name="title_notifications">生码</string>
-    <string name="scan_input_hint">输入文字</string>
+    <string name="create_qr_input_hint">输入文字</string>
+    <string name="create_qr_button">生成二维码</string>
+    <string name="qr_image">二维码</string>
+    <string name="scan_qr_button">扫描</string>
+    <string name="scan_qr_result">扫描结果：</string>
 </resources>

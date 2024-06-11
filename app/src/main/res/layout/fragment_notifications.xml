@@ -21,14 +21,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/textInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/scan_input_hint"
+        android:hint="@string/create_qr_input_hint"
         android:inputType="text"
         android:singleLine="false"
         app:layout_constraintBottom_toTopOf="@+id/createButton"
@@ -41,7 +42,7 @@
         android:id="@+id/createButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="生成二维码"
+        android:text="@string/create_qr_button"
         app:layout_constraintBottom_toTopOf="@+id/qrCodeImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,11 +52,12 @@
         android:id="@+id/qrCodeImage"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:contentDescription="@string/qr_image"
+        android:src="@android:mipmap/sym_def_app_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createButton"
-        tools:src="@android:mipmap/sym_def_app_icon" />
+        app:layout_constraintTop_toBottomOf="@+id/createButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
